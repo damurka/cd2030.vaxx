@@ -1,5 +1,5 @@
 # The page registry: every analysis page in one place. Each entry says what the page is called, where it sits, what it
-# is about, which help chapter it opens, and which module builds it. run_app() builds the page containers and starts
+# is about, which section of the docs its Get help button opens (a page of the app guide, apps/countdown/, and a heading id), and which module builds it. run_app() builds the page containers and starts
 # the servers from this list (cd_pages_ui(), cd_pages_server()), and cd_page_ui() reads the title/section/subtitle
 # from here, so a page module never repeats them. To add a page: write its module, then add one entry here and
 # a nav item in run_app().
@@ -12,7 +12,7 @@ vaxx_pages <- function() list(
     title = "title_rr_main",
     section = "lbl_nav_section_quality",
     subtitle = "sub_rr_main",
-    help = c("2-data-quality-assessment", "reporting-completeness")
+    help = c("apps/countdown/data-quality", "reporting-rate")
   ),
   cd_page_def(
     id = "data_completeness",
@@ -21,7 +21,7 @@ vaxx_pages <- function() list(
     title = "title_complete_main",
     section = "lbl_nav_section_quality",
     subtitle = "sub_complete_main",
-    help = c("2-data-quality-assessment", "data-missingness")
+    help = c("apps/countdown/data-quality", "data-missingness")
   ),
   cd_page_def(
     id = "internal_consistency",
@@ -30,7 +30,7 @@ vaxx_pages <- function() list(
     title = "title_consist_main",
     section = "lbl_nav_section_quality",
     subtitle = "sub_consist_main",
-    help = c("2-data-quality-assessment", "ratio-calculations")
+    help = c("apps/countdown/data-quality", "internal-consistency")
   ),
   cd_page_def(
     id = "outlier_detection",
@@ -39,7 +39,7 @@ vaxx_pages <- function() list(
     title = "title_outlier_main",
     section = "lbl_nav_section_quality",
     subtitle = "sub_outlier_main",
-    help = c("2-data-quality-assessment", "outlier-detection")
+    help = c("apps/countdown/data-quality", "outlier-detection")
   ),
   cd_page_def(
     id = "overall_score",
@@ -48,7 +48,7 @@ vaxx_pages <- function() list(
     title = "title_score_main",
     section = "lbl_nav_section_quality",
     subtitle = "sub_score_main",
-    help = c("2-data-quality-assessment", "overall-quality-score"),
+    help = c("apps/countdown/data-quality", "overall-data-quality-score"),
     report = "data_quality"
   ),
   cd_page_def(
@@ -58,7 +58,7 @@ vaxx_pages <- function() list(
     title = "btn_adjust_remove_years",
     section = "lbl_nav_section_quality",
     subtitle = "sub_remove_years",
-    help = c("3-data-adjustment", "631-remove-years"),
+    help = c("apps/countdown/data-preparation", "remove-years"),
     active = FALSE
   ),
   cd_page_def(
@@ -68,7 +68,7 @@ vaxx_pages <- function() list(
     title = "title_adjust_main",
     section = "lbl_nav_section_quality",
     subtitle = "sub_adjust_main",
-    help = c("3-data-adjustment"),
+    help = c("apps/countdown/data-preparation", "data-adjustment"),
     active = FALSE
   ),
   cd_page_def(
@@ -78,7 +78,7 @@ vaxx_pages <- function() list(
     title = "title_adjust_changes",
     section = "lbl_nav_section_quality",
     subtitle = "sub_adjust_changes",
-    help = c("3-data-adjustment"),
+    help = c("apps/countdown/data-preparation", "data-adjustment-changes"),
     report = "adjustment"
   ),
   cd_page_def(
@@ -88,7 +88,7 @@ vaxx_pages <- function() list(
     title = "title_denom_assessment",
     section = "lbl_nav_section_denominators",
     subtitle = "sub_denom_assessment",
-    help = c("4-denominator-selection", "population-trend-comparison")
+    help = c("apps/countdown/denominators", "denominator-assessment")
   ),
   cd_page_def(
     id = "denominator_selection",
@@ -97,7 +97,7 @@ vaxx_pages <- function() list(
     title = "title_denom_selection",
     section = "lbl_nav_section_denominators",
     subtitle = "sub_denom_selection",
-    help = c("4-denominator-selection"),
+    help = c("apps/countdown/denominators", "denominator-selection"),
     report = "denominator_selection"
   ),
   cd_page_def(
@@ -107,7 +107,7 @@ vaxx_pages <- function() list(
     title = "title_coverage_national",
     section = "title_nav_national_analysis",
     subtitle = "sub_cov_national",
-    help = c("5-coverage-estimation"),
+    help = c("apps/countdown/coverage-equity-targets", "national-coverage"),
     denominator = TRUE
   ),
   cd_page_def(
@@ -117,7 +117,7 @@ vaxx_pages <- function() list(
     title = "title_nav_subnational_coverage",
     section = "title_nav_subnational_analysis",
     subtitle = "sub_cov_subnational",
-    help = c("7-subnational-analysis"),
+    help = c("apps/countdown/subnational", "sub-national-coverage"),
     denominator = TRUE
   ),
   cd_page_def(
@@ -127,7 +127,7 @@ vaxx_pages <- function() list(
     title = "title_inequ_national",
     section = "title_nav_national_analysis",
     subtitle = "sub_inequ_national",
-    help = c("6-equity-analysis"),
+    help = c("apps/countdown/coverage-equity-targets", "national-inequality-routine-data"),
     denominator = TRUE
   ),
   cd_page_def(
@@ -137,7 +137,7 @@ vaxx_pages <- function() list(
     title = "title_inequ_subnational",
     section = "title_nav_subnational_analysis",
     subtitle = "sub_inequ_subnational",
-    help = c("7-subnational-analysis"),
+    help = c("apps/countdown/subnational", "sub-national-inequality"),
     denominator = TRUE
   ),
   cd_page_def(
@@ -147,7 +147,7 @@ vaxx_pages <- function() list(
     title = "title_nav_global_coverage",
     section = "title_nav_national_analysis",
     subtitle = "sub_target_national",
-    help = c("national-global-coverage"),
+    help = c("apps/countdown/coverage-equity-targets", "coverage-target"),
     denominator = TRUE
   ),
   cd_page_def(
@@ -157,7 +157,7 @@ vaxx_pages <- function() list(
     title = "title_nav_global_coverage",
     section = "title_nav_subnational_analysis",
     subtitle = "sub_target_subnational",
-    help = c("7-subnational-analysis"),
+    help = c("apps/countdown/subnational", "coverage-target"),
     denominator = TRUE
   ),
   cd_page_def(
@@ -167,7 +167,7 @@ vaxx_pages <- function() list(
     title = "title_nav_equity",
     section = "title_nav_national_analysis",
     subtitle = "sub_equity",
-    help = c("national-inequality", "interpretation-of-equiplots"),
+    help = c("apps/countdown/coverage-equity-targets", "equity-assessment-survey-data"),
     denominator = TRUE,
     report = "national_inequality"
   ),
@@ -178,7 +178,7 @@ vaxx_pages <- function() list(
     title = "title_reports",
     section = "lbl_nav_section_output",
     subtitle = "sub_reports",
-    help = c("12-dissemination")
+    help = c("apps/countdown/reports")
   )
 )
 
