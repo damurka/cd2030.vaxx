@@ -40,7 +40,7 @@
       "key": "title_upload_anc1_survey",
       "en": "ANC1 Coverage (%)",
       "fr": "Couverture ANC1 (%)",
-      "pt": "Cobertura ANC1 (%)"
+      "pt": "Cobertura CPN1 (%)"
     },
     {
       "key": "title_upload_penta1_survey",
@@ -76,7 +76,7 @@
       "key": "btn_upload_map_survey",
       "en": "Map Survey Data",
       "fr": "Associer les données d'enquête",
-      "pt": "Mapear Dados da Pesquisa"
+      "pt": "Mapear Dados do Inquérito"
     },
     {
       "key": "btn_upload_map_mapping",
@@ -88,25 +88,25 @@
       "key": "msg_upload_manual_mapping",
       "en": "Manual Mapping of Survey Data",
       "fr": "Cartographie manuelle des données d’enquête",
-      "pt": "Mapeamento manual dos dados da pesquisa"
+      "pt": "Mapeamento manual dos dados do inquérito"
     },
     {
       "key": "opt_consist_ipv1_ipv2",
       "en": "IPV1 and IPV2",
       "fr": "IPV1 et IPV2",
-      "pt": "IPV1 e IPV2"
+      "pt": "VIP1 e VIP2"
     },
     {
       "key": "plt_title_consist_ratios",
       "en": "Ratios of the number of children vaccinated (ANC1/Penta1, Penta1/Penta3, and OPV1/OPV3) compared with expected ratios",
       "fr": "Rapports du nombre d’enfants vaccinés (CPN1/Penta1, Penta1/Penta3 et OPV1/OPV3) comparés aux rapports attendus",
-      "pt": "Razões do número de crianças vacinadas (CPN1/Penta1, Penta1/Penta3 e OPV1/OPV3) comparadas às razões esperadas"
+      "pt": "Razões do número de crianças vacinadas (CPN1/Penta1, Penta1/Penta3 e VOP1/VOP3) comparadas com as razões esperadas"
     },
     {
       "key": "lbl_consist_ratio_opv1_opv3",
       "en": "Ratio OPV1 / OPV3",
       "fr": "Rapport OPV1 / OPV3",
-      "pt": "Razão OPV1 / OPV3"
+      "pt": "Razão VOP1 / VOP3"
     },
     {
       "key": "lbl_score_range_opv1_opv3",
@@ -160,13 +160,13 @@
       "key": "opt_anc4",
       "en": "ANC 4 Visits",
       "fr": "4 CPN",
-      "pt": "4 Consultas de Pré-natal"
+      "pt": "4 consultas pré-natais"
     },
     {
       "key": "opt_opd",
       "en": "OPD Visits",
       "fr": "Consultations externes",
-      "pt": "Consultas ambulatoriais"
+      "pt": "Consultas externas"
     }
   ]
 }
