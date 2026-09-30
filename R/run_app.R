@@ -61,9 +61,10 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
     cd_nav_quality(),
     cd_nav_denominators(),
     cd_nav_section("lbl_nav_section_analysis", cd_nav_national(), cd_nav_subnational()),
-    # Reports built from blocks of this app's charts and tables (datasuite.ui, R/kit-reports.R)
+    # Reports built from blocks of this app's charts and tables (datasuite.ui, R/kit-reports.R): opened from the header's
+    # Reports button, not drawn in the sidebar (hidden: the breadcrumb and the AI still know the page)
     cd_nav_section("lbl_nav_section_output",
-      cd_nav_item("title_reports", tabName = "reports", icon = "file-lines", requires_adjustment = TRUE)
+      cd_nav_item("title_reports", tabName = "reports", icon = "file-lines", requires_adjustment = TRUE, hidden = TRUE)
     )
   )
 
