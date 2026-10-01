@@ -1,3 +1,9 @@
+# cd2030.vaxx 2.0.6
+
+* The Load Data screen is cd2030.core's (`cd_upload_data_ui()` / `cd_upload_data_server()`, cd2030.core 1.3.7), the
+  same as the RMNCAH app's; this app keeps only its part of the wizard (`vaxx_wizard_options()`).
+* A failed reference-data upload (UN or WUENIC estimates) says why, not only that the format is unsupported.
+
 # cd2030.vaxx 2.0.5
 
 * The report builder is Quire (datasuite.ui 0.4.0, quire 0.2.17): tables can be aligned (numbers and text apart).

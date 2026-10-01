@@ -72,7 +72,7 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
     app_name = app_name, app_version = app_version, theme = "vaccine",
     nav_sections = nav, registry = pages,
     i18n = i18n, language = language, selected_file = selected_file,
-    upload_ui = upload_data_ui, upload_server = upload_data_server
+    upload_ui = cd_upload_data_ui, upload_server = cd_upload_data_server
   )
   if (length(list(...))) app$options <- utils::modifyList(app$options %||% list(), list(...))
   app
