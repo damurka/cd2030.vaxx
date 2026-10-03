@@ -1,3 +1,10 @@
+# cd2030.vaxx 2.0.8
+
+* Requires cd2030.core 1.3.8 and datasuite.ui 0.4.3: zero-dose, under-vaccinated and measles2 coverage as the
+  Countdown 2030 Stata code computes them; every table of the dataset in its notebooks, with what it holds; charts and
+  tables already drawn follow a change of language; cards built outside a reactive context no longer fail.
+* The same version as cd2030.rmncah, cd2030.vaxx and cd2030.pooled.
+
 # cd2030.vaxx 2.0.6
 
 * The Load Data screen is cd2030.core's (`cd_upload_data_ui()` / `cd_upload_data_server()`, cd2030.core 1.3.7), the
