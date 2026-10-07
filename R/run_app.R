@@ -21,16 +21,23 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
   # cd2030.core keeps ONE indicator group for the whole R session (set_selected_group()); this app's own copy
   # (cd2030.app_group) is one loading a dataset cannot change
   options(cd2030.selected_group = "vaccine", cd2030.app_group = "vaccine")
+  # The tabs of every page that names none of its own (national and sub-national inequality, the maps): penta3,
+  # measles1 and the two dropouts. Without it they were cd2030.core's default, the RMNCAH set (ANC4, live births, ...).
+  options(cd2030.default_indicators = c("penta3", "measles1", "dropout_penta13", "dropout_penta3mcv1"))
   set_selected_group("vaccine")
 
   # What is particular to this app for the shared page modules (R/ui-core-config.R in cd2030.core lists the keys).
   options(cd2030.config = list(
+    # National and sub-national coverage, and the Bayesian model: the vaccine app's headline indicators
+    nat_cov_indicators = c("penta3", "measles1", "dropout_penta13", "dropout_penta3mcv1"),
+    bayes_indicators = c("penta3", "measles1"),
     target_indicators = c("vaccine", "dropout"),
     # cd2030.core's equiplot_*() take the analysis indicators, but the standard survey data has no coverage for these:
     equity_indicators = c("penta3", "measles1", "dropout_penta13", "dropout_penta3mcv1"),
     equity_custom_exclude = c("ideliv", "ipv1", "ipv2", "dropout_measles12"),
-    cov_trend_indicators = c("penta1", "penta3", "measles1"),
-    sub_derived_indicators = c("penta1", "penta3", "measles1"),
+    # The three Denominator Selection cards have the same four tabs
+    cov_trend_indicators = c("instlivebirths", "bcg", "penta3", "measles1"),
+    sub_derived_indicators = c("instlivebirths", "bcg", "penta3", "measles1"),
     survey_comp_indicators = c("instlivebirths", "bcg", "penta3", "measles1"),
     adjustment_indicators = c("instlivebirths", "bcg", "penta1", "measles1"),
     k_factors = list(
@@ -60,7 +67,12 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
     cd_nav_start(),
     cd_nav_quality(),
     cd_nav_denominators(),
-    cd_nav_section("lbl_nav_section_analysis", cd_nav_national(), cd_nav_subnational()),
+    cd_nav_section("lbl_nav_section_analysis", cd_nav_national(), cd_nav_subnational(),
+      cd_nav_item("title_bayesian_analysis", icon = "chart-area", requires_adjustment = TRUE, children = list(
+        cd_nav_item("title_nav_national_analysis", tabName = "bayesian_national", icon = "earth-americas"),
+        cd_nav_item("title_nav_subnational_analysis", tabName = "bayesian_subnational", icon = "map-location-dot")
+      ))
+    ),
     # Reports built from blocks of this app's charts and tables (datasuite.ui, R/kit-reports.R): opened from the header's
     # Reports button, not drawn in the sidebar (hidden: the breadcrumb and the AI still know the page)
     cd_nav_section("lbl_nav_section_output",

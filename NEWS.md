@@ -1,3 +1,13 @@
+# cd2030.vaxx 2.0.9
+
+* Bayesian Analysis (national and sub-national) for penta3 and measles1: the coverage model the RMNCAH app has
+  (cd2030.core 1.3.9's page). Its packages are installed when the page is first used.
+* National and sub-national coverage and inequality have the vaccine app's tabs: penta3, measles1, the penta1 to
+  penta3 dropout and the penta3 to measles1 dropout. The inequality pages and maps showed the RMNCAH set (ANC4, live
+  births, low birth weight).
+* Denominator Selection: its three cards have the same four tabs (institutional live births, BCG, penta3, measles1).
+* Requires cd2030.core 1.3.9.
+
 # cd2030.vaxx 2.0.8
 
 * Requires cd2030.core 1.3.8 and datasuite.ui 0.4.3: zero-dose, under-vaccinated and measles2 coverage as the

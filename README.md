@@ -38,7 +38,7 @@ updates it when the extension is updated.
 | Start | Introduction (`inst/intro`), Load Data (the wizard, from cd2030.core, with this app's options: `vaxx_wizard_options()`) |
 | Data quality | reporting rate, completeness, internal consistency, outliers, overall score, remove years, adjustment, adjustment changes |
 | Denominators | assessment, selection |
-| Analysis | national and subnational coverage, inequality, targets, equity |
+| Analysis | national and subnational coverage, inequality, targets, equity; the Bayesian coverage model (penta3, measles1) |
 | Reports | the report builder |
 
 Every page is shared with the RMNCAH app and lives in cd2030.core (`R/ui-*.R`); what makes it the Vaxx app is its

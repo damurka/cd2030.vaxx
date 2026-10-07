@@ -161,6 +161,29 @@ vaxx_pages <- function() list(
     denominator = TRUE,
     report = "national_inequality"
   ),
+  # The Bayesian coverage model (cd2030.core's page): penta3 and measles1 (cd2030.config's bayes_indicators)
+  cd_page_def(
+    id = "bayesian_national",
+    ui = bayesian_ui,
+    server = bayesian_page_server,
+    title = "title_bayesian_analysis",
+    section = "title_bayesian_analysis",
+    subtitle = "sub_bayesian",
+    help = c("apps/countdown/advanced-analysis", "bayesian-analysis"),
+    denominator = TRUE,
+    server_args = list("national")
+  ),
+  cd_page_def(
+    id = "bayesian_subnational",
+    ui = bayesian_ui,
+    server = bayesian_page_server,
+    title = "title_bayesian_analysis",
+    section = "title_bayesian_analysis",
+    subtitle = "sub_bayesian",
+    help = c("apps/countdown/advanced-analysis", "bayesian-analysis"),
+    denominator = TRUE,
+    server_args = list("adminlevel_1")
+  ),
   cd_page_def(
     id = "reports",
     ui = reports_ui,
