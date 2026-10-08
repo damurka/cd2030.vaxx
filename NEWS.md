@@ -1,3 +1,8 @@
+# cd2030.vaxx 2.0.10
+
+* Bayesian Analysis no longer holds the app up when a fit ends, nor slows every later change to the dataset: a
+  fitted model is kept without the sampler's draws (cd2030.core 1.3.10, which this requires).
+
 # cd2030.vaxx 2.0.9
 
 * Bayesian Analysis (national and sub-national) for penta3 and measles1: the coverage model the RMNCAH app has
