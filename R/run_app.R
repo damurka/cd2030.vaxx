@@ -26,7 +26,7 @@ run_app <- function(selected_file = Sys.getenv("CDSUITE_SHINY_SELECTED_FILE", un
   options(cd2030.default_indicators = c("penta3", "measles1", "dropout_penta13", "dropout_penta3mcv1"))
   set_selected_group("vaccine")
 
-  # What is particular to this app for the shared page modules (R/ui-core-config.R in cd2030.core lists the keys).
+  # What is particular to this app for the shared page modules (R/app-config.R in cd2030.core lists the keys).
   options(cd2030.config = list(
     # National and sub-national coverage, and the Bayesian model: the vaccine app's headline indicators
     nat_cov_indicators = c("penta3", "measles1", "dropout_penta13", "dropout_penta3mcv1"),

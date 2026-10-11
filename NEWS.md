@@ -1,3 +1,8 @@
+# cd2030.vaxx 2.0.11
+
+* Bayesian Analysis no longer stops the other pages while a fit starts: the worker is sent the fit's inputs alone, not
+  the page's whole environment (cd2030.core 1.4.0, which this requires).
+
 # cd2030.vaxx 2.0.10
 
 * Bayesian Analysis no longer holds the app up when a fit ends, nor slows every later change to the dataset: a
